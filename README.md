@@ -1,7 +1,8 @@
 # msk-eda
 ## eda context review
 ### traditional sync request-response model pros & cons analysis
-<img width="1505" alt="Screenshot 2023-05-10 at 10 41 40" src="https://github.com/symeta/msk-eda/assets/97269758/5a8b8713-9926-4ef2-ac44-1302c53f34b1">
+
+<img width="889" alt="image" src="https://github.com/symeta/msk-eda/assets/97269758/462a7805-b182-4223-9008-fb38aac8fbdb">
 
 ### ASYNC message model:
 - point-point model (queue/router)
