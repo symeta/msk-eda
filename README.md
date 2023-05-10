@@ -131,6 +131,9 @@ cli sample:
 ```
 [cli details](https://docs.confluent.io/kafka/operations-tools/kafka-tools.html)
 
+### 2.11 msk tier storage
+this feature is to offer the possibility that all kafka cluster data is persistent with optimized storage. version 2.8.2 and above available.
+[msk tiered storage](https://docs.aws.amazon.com/msk/latest/developerguide/msk-tiered-storage.html)
 
 
 ## 3. useful resources:
