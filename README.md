@@ -97,6 +97,17 @@ kafka_df = spark.readStream \
     .option("spark.streaming.kafka.maxRatePerPartition", "50") \
     .load()
 ```
+- [details for configing managing offsets](https://spark.apache.org/docs/2.2.0/structured-streaming-kafka-integration.html)
+- [kafka streams exactly once message consumption](https://www.confluent.io/blog/enabling-exactly-once-kafka-streams/)
+
+### msk scaling
+- ***vertical scaling***: manually upgrade broker instance type, or simply add storage
+- ***horizontal scaling***: manually add broker into cluster
+[msk update broker count](https://docs.aws.amazon.com/msk/latest/developerguide/msk-update-broker-count.html)
+[kafka cluster expansion ops](https://kafka.apache.org/documentation/#basic_ops_cluster_expansion)
+
+### Kafka Connect
+[msk managed connectors](https://aws.amazon.com/blogs/aws/introducing-amazon-msk-connect-stream-data-to-and-from-your-apache-kafka-clusters-using-managed-connectors/)
 
 ## useful resources:
 - [1. msk best practices](https://docs.aws.amazon.com/msk/latest/developerguide/bestpractices.html)
