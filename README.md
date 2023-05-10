@@ -109,7 +109,29 @@ kafka_df = spark.readStream \
 ### Kafka Connect
 [msk managed connectors](https://aws.amazon.com/blogs/aws/introducing-amazon-msk-connect-stream-data-to-and-from-your-apache-kafka-clusters-using-managed-connectors/)
 
+### msk monotoring
+<img width="1069" alt="image" src="https://github.com/symeta/msk-eda/assets/97269758/d4d8f099-7eac-4d30-a041-d0e61e8cd195">
+
+### msk cli
+msk cluster broker list sample:
+```sh
+<broker1 endpoint>:9092,<broker2 endpoint>:9092,<broker3 endpoint>:9092
+```
+cli sample:
+```sh
+./kafka-topics.sh --bootstrap-server <msk cluster broker list> —list
+
+./kafka-console-consumer.sh --bootstrap-server <msk cluster broker list> --topic <topic name> from beginning
+
+./kafka-console-consumer.sh --bootstrap-server <msk cluster broker list> --topic <topic name>
+
+./kafka-topics.sh —bootstrap-server <msk cluster broker list>  —create —topic <topic name> —partitions 3 —replication-factor 2
+```
+[cli details](https://docs.confluent.io/kafka/operations-tools/kafka-tools.html)
+
+
+
 ## useful resources:
 - [1. msk best practices](https://docs.aws.amazon.com/msk/latest/developerguide/bestpractices.html)
 - [2. best practices of msk provisioning](https://www.youtube.com/watch?v=4C_FT2Ie9E4)
-- [3. ]
+
