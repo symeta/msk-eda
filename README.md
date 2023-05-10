@@ -105,11 +105,11 @@ kafka_df = spark.readStream \
 ### 2.7 msk scaling
 - ***vertical scaling***: manually upgrade broker instance type, or simply add storage
 - ***horizontal scaling***: manually add broker into cluster
-[msk update broker count](https://docs.aws.amazon.com/msk/latest/developerguide/msk-update-broker-count.html)
-[kafka cluster expansion ops](https://kafka.apache.org/documentation/#basic_ops_cluster_expansion)
+- [msk update broker count](https://docs.aws.amazon.com/msk/latest/developerguide/msk-update-broker-count.html)
+- [kafka cluster expansion ops](https://kafka.apache.org/documentation/#basic_ops_cluster_expansion)
 
 ### 2.8 Kafka Connect
-[msk managed connectors](https://aws.amazon.com/blogs/aws/introducing-amazon-msk-connect-stream-data-to-and-from-your-apache-kafka-clusters-using-managed-connectors/)
+- [msk managed connectors](https://aws.amazon.com/blogs/aws/introducing-amazon-msk-connect-stream-data-to-and-from-your-apache-kafka-clusters-using-managed-connectors/)
 
 ### 2.9 msk monotoring
 <img width="1069" alt="image" src="https://github.com/symeta/msk-eda/assets/97269758/d4d8f099-7eac-4d30-a041-d0e61e8cd195">
@@ -129,11 +129,11 @@ cli sample:
 
 ./kafka-topics.sh —bootstrap-server <msk cluster broker list>  —create —topic <topic name> —partitions 3 —replication-factor 2
 ```
-[cli details](https://docs.confluent.io/kafka/operations-tools/kafka-tools.html)
+- [cli details](https://docs.confluent.io/kafka/operations-tools/kafka-tools.html)
 
 ### 2.11 msk tier storage
 this feature is to offer the possibility that all kafka cluster data is persistent with optimized storage. version 2.8.2 and above available.
-[msk tiered storage](https://docs.aws.amazon.com/msk/latest/developerguide/msk-tiered-storage.html)
+- [msk tiered storage](https://docs.aws.amazon.com/msk/latest/developerguide/msk-tiered-storage.html)
 
 
 ## 3. useful resources:
