@@ -141,7 +141,7 @@ this feature is to offer the possibility that all kafka cluster data is persiste
 
 ## 3. useful resources:
 - [1. msk best practices](https://docs.aws.amazon.com/msk/latest/developerguide/bestpractices.html)
-- [2. best practices of msk provisioning](https://www.youtube.com/watch?v=4C_FT2Ie9E4)]
+- [2. best practices of msk provisioning](https://www.youtube.com/watch?v=4C_FT2Ie9E4)
 - [3. msk learning resources](https://aws.amazon.com/msk/resources/)
 - [4. msk hands on workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/c2b72b6f-666b-4596-b8bc-bafa5dcca741/en-US)
 
