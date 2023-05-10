@@ -1,35 +1,36 @@
 # msk-eda
-## eda context review
-### traditional sync request-response model pros & cons analysis
+## 1. eda context review
+### 1.1 traditional sync request-response model pros & cons analysis
 
 <img width="889" alt="image" src="https://github.com/symeta/msk-eda/assets/97269758/462a7805-b182-4223-9008-fb38aac8fbdb">
 
-### ASYNC message model:
+### 1.2 ASYNC message model:
 - point-point model (queue/router)
 - pub-sub model
 
-### Even Bus:
+### 1.3 Even Bus:
 
 <img width="284" alt="image" src="https://github.com/symeta/msk-eda/assets/97269758/a0228a03-9423-49c6-b5d4-6b56d78fda70">
 
-## msk overview
-### kafka application scenario
-- 1
+## 2. msk overview
+### 2.1 kafka application scenario
+- 1. Distributed Message Cache
 
 ![image](https://github.com/symeta/msk-eda/assets/97269758/9a39c2f5-15da-4161-bab3-74dc9b811216)
-- 2
+
+- 2. Distributed Event Bus
 
 ![image](https://github.com/symeta/msk-eda/assets/97269758/99249337-f634-4514-92fa-241133d4a08f)
 
-### msk managed scope
+### 2.2 msk managed scope
 
 <img width="1083" alt="image" src="https://github.com/symeta/msk-eda/assets/97269758/228006c8-d43c-495b-a00f-e263d09c13e0">
 
-### msk sizing
+### 2.3 msk sizing
 - [1. msk sizing tool](https://tiny.amazon.com/1cquo8z50)
 - [2. msk sizing blog](https://aws.amazon.com/blogs/big-data/best-practices-for-right-sizing-your-apache-kafka-clusters-to-optimize-performance-and-cost/)
 
-### msk configuration
+### 2.4 msk configuration
 #### 1. default.replication.factor 
      same with AZ quantity
 #### 2. num.partitions 
@@ -57,7 +58,7 @@ This configuration controls the maximum time we will retain a log before we will
 - socket.send.buffer.bytes=102400
 - zookeeper.session.timeout.ms=18000
 
-### msk producer sample code (python)
+### 2.5 msk producer sample code (python)
 ```shell
 pip install kafka-pythonpip install kafka-python
 ```
@@ -79,7 +80,7 @@ if __name__ == '__main__':
 The default value is 1, which means as long as the producer receives an ack from the leader broker of that topic, it would take it as a successful commit and continue with the next message. It’s not recommended to set acks=0, because then you don’t get any guarantee on the commit. acks=all would make sure that the producer gets acks from all the in-sync replicas of this topic. It gives the strongest message durability, but it also takes long time which results in higher latency. So, you need to decide what is more important for you
 
 
-### msk consumer sample code (pyspark)
+### 2.6 msk consumer sample code (pyspark)
 ```py
 from pyspark.sql import SparkSession
 spark = SparkSession \
@@ -101,19 +102,19 @@ kafka_df = spark.readStream \
 - [details for configing managing offsets](https://spark.apache.org/docs/2.2.0/structured-streaming-kafka-integration.html)
 - [kafka streams exactly once message consumption](https://www.confluent.io/blog/enabling-exactly-once-kafka-streams/)
 
-### msk scaling
+### 2.7 msk scaling
 - ***vertical scaling***: manually upgrade broker instance type, or simply add storage
 - ***horizontal scaling***: manually add broker into cluster
 [msk update broker count](https://docs.aws.amazon.com/msk/latest/developerguide/msk-update-broker-count.html)
 [kafka cluster expansion ops](https://kafka.apache.org/documentation/#basic_ops_cluster_expansion)
 
-### Kafka Connect
+### 2.8 Kafka Connect
 [msk managed connectors](https://aws.amazon.com/blogs/aws/introducing-amazon-msk-connect-stream-data-to-and-from-your-apache-kafka-clusters-using-managed-connectors/)
 
-### msk monotoring
+### 2.9 msk monotoring
 <img width="1069" alt="image" src="https://github.com/symeta/msk-eda/assets/97269758/d4d8f099-7eac-4d30-a041-d0e61e8cd195">
 
-### msk cli
+### 2.10 msk cli
 msk cluster broker list sample:
 ```sh
 <broker1 endpoint>:9092,<broker2 endpoint>:9092,<broker3 endpoint>:9092
@@ -132,7 +133,7 @@ cli sample:
 
 
 
-## useful resources:
+## 3. useful resources:
 - [1. msk best practices](https://docs.aws.amazon.com/msk/latest/developerguide/bestpractices.html)
 - [2. best practices of msk provisioning](https://www.youtube.com/watch?v=4C_FT2Ie9E4)
 
