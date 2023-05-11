@@ -27,8 +27,7 @@
 <img width="1083" alt="image" src="https://github.com/symeta/msk-eda/assets/97269758/228006c8-d43c-495b-a00f-e263d09c13e0">
 
 ### 2.3 msk sizing
-- [1. msk sizing tool]([msk_sizing.xlsx](https://github.com/symeta/msk-eda/files/11449744/msk_sizing.xlsx)
-)
+- [1. msk sizing tool](https://github.com/symeta/msk-eda/files/11449744/msk_sizing.xlsx)
 - [2. msk sizing blog](https://aws.amazon.com/blogs/big-data/best-practices-for-right-sizing-your-apache-kafka-clusters-to-optimize-performance-and-cost/)
 
 ### 2.4 msk configuration
